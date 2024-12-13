@@ -3,8 +3,12 @@ import Card from "../../Elements/Card";
 import Stepper  from "../../Elements/Stepper";
 import { Link } from "react-router-dom";
 import { Icon } from "../../Elements/Icon";
+import { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 const CardBalance = () => {
+    const {theme, setTheme} = useContext(ThemeContext);
+    
     const balanceCard = accounts.map((account) => (
         <div key={account.id} className="p-2">
             <div className="flex justify-between">
